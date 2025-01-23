@@ -1,0 +1,76 @@
+.landing-page{
+    background-color: #dae9f2;
+    .head{
+        padding: 0px 120px 0px 135px
+    }
+    .banner{
+        padding: 0 125px;
+        .banner img{
+            width: 100%;
+        }
+    }
+    
+    .pledge-btn{
+        background-color: #050a44;
+        color: white;
+        border-radius: 45px;
+        padding: 5px 20px;
+    }
+    .certificate{
+
+        .title-text{
+            color: #770249;
+            font-weight: 600;
+            .diff{
+                padding: 0 5px;
+            }
+            
+        }
+        .circle{
+            border: 2px solid #770249;
+            border-radius: 50%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .head{
+            display: flex !important;
+            justify-content: center !important;
+            background-color: #2e4b90 !important;
+            background: url("/src/assets/Gov-logo2.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 120px;
+            width: 100% !important;
+            height: 55px;
+            text-align: center;
+            margin: 0 !important;
+            div{
+                display: none;
+                
+            }
+        }
+        .head img{
+            display: none;
+        }
+
+        .banner{
+           .desktop{
+            display: none;
+           }
+           .mobile{
+            display: block !important;
+            height: 290px;
+            margin-top: 8px;
+           }
+        }
+        .pledge-btn{
+            width: 100% !important;
+            height: 50px;
+            padding: 0px 10px !important;
+            margin: 15px 10px;
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+}
