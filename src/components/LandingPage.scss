@@ -1,76 +1,227 @@
-.landing-page{
-    background-color: #dae9f2;
-    .head{
-        padding: 0px 120px 0px 135px
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap");
+.landing-page {
+  background-color: #dae9f2;
+  .head {
+    padding: 0px 120px 0px 135px;
+  }
+  .banner {
+    padding: 0 125px;
+    .banner img {
+      width: 100%;
     }
-    .banner{
-        padding: 0 125px;
-        .banner img{
-            width: 100%;
-        }
-    }
-    
-    .pledge-btn{
-        background-color: #050a44;
-        color: white;
-        border-radius: 45px;
-        padding: 5px 20px;
-    }
-    .certificate{
+  }
 
-        .title-text{
-            color: #770249;
-            font-weight: 600;
-            .diff{
-                padding: 0 5px;
-            }
-            
-        }
-        .circle{
-            border: 2px solid #770249;
-            border-radius: 50%;
-        }
+  .pledge-btn {
+    background-color: #050a44;
+    color: white;
+    border-radius: 45px;
+    padding: 5px 20px;
+  }
+  .certificate {
+    margin-bottom: 30px;
+    .title-text {
+      color: #770249;
+      font-weight: 600;
+      .diff {
+        padding: 0 5px;
+      }
+    }
+    .mail,
+    .download-card {
+      cursor: pointer;
+    }
+    .mail div {
+      color: #770249;
+    }
+    .download-card {
+      color: #770249;
+    }
+  }
+
+  .view-analytics {
+    background-color: #375c89;
+    padding: 20px 0px;
+
+    .analytics {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-right: 20px;
+      }
+
+      .individual-pledge-count {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        font-family: Hind, serif;
+      }
+
+      .citizen {
+        font-size: 16px;
+        font-family: Hind, serif;
+        margin-right: 15px;
+      }
+      .view-analytics-btn {
+        border-radius: 50px;
+        background-color: #eee9e0;
+        font-size: 1.143rem;
+        padding: 5px 15px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+  .gov-department-logos {
+    background-color: #253250;
+    padding: 20px 0px;
+    .diff-logo {
+      border-right: 1px solid #6b6c6f;
+      margin: 0px 10px;
+      padding: 0px 0px 6px 0px;
+    }
+  }
+
+  .gov-orgs{
+    background-color: #000;
+    padding: 15px 0px;
+    .diff-logo {
+      border-right: 1px solid #6b6c6f;
+      margin: 0px 10px;
+      padding: 6px 0px 15px 0px;
+    }
+  }
+
+  .gov-footer{
+    background-color: #eeeae1;
+    padding: 20px 0px;
+    color: #7f8080;
+    font-size: 13px;
+    .inner-foot{
+      img{
+        margin: 10px 30px 0 0;
+      }
+      .foot{
+        width: 40%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .head {
+      display: flex !important;
+      justify-content: center !important;
+      background-color: #2e4b90 !important;
+      background: url("/src/assets/Gov-logo2.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 120px;
+      width: 100% !important;
+      height: 55px;
+      text-align: center;
+      margin: 0 !important;
+      div {
+        display: none;
+      }
+    }
+    .head img {
+      display: none;
     }
 
-    @media (max-width: 768px) {
-        .head{
-            display: flex !important;
-            justify-content: center !important;
-            background-color: #2e4b90 !important;
-            background: url("/src/assets/Gov-logo2.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 120px;
-            width: 100% !important;
-            height: 55px;
-            text-align: center;
-            margin: 0 !important;
-            div{
-                display: none;
-                
-            }
+    .banner {
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block !important;
+        height: 290px;
+        margin-top: 8px;
+      }
+    }
+    .pledge-btn {
+      width: 100% !important;
+      height: 50px;
+      padding: 0px 10px !important;
+      margin: 15px 10px;
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    .certificate {
+      flex-direction: column;
+      padding: 10px;
+
+      .title-text {
+        font-size: 12px;
+        margin-bottom: 15px;
+      }
+
+      .certificate-cards {
+        position: unset;
+        padding: 3px;
+      }
+
+      .mail-card {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column !important;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        .mail {
+          display: flex !important;
+          flex-direction: column !important;
         }
-        .head img{
-            display: none;
+      }
+
+      .download-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      img {
+        height: 40px;
+      }
+
+      div {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.2;
+      }
+    }
+
+    .view-analytics {
+      margin-bottom: 50px;
+      .analytics {
+        padding: 0px 20px;
+        img {
+          margin-right: 10px;
+        }
+        .individual-pledge-count {
+          font-size: 20px;
+        }
+        .citizen {
+          font-size: 15px;
+          margin-right: 8px;
         }
 
-        .banner{
-           .desktop{
-            display: none;
-           }
-           .mobile{
-            display: block !important;
-            height: 290px;
-            margin-top: 8px;
-           }
+        .view-analytics-btn {
+          font-size: 15px;
         }
-        .pledge-btn{
-            width: 100% !important;
-            height: 50px;
-            padding: 0px 10px !important;
-            margin: 15px 10px;
-            font-size: 13px;
-            line-height: 15px;
-        }
+      }
     }
+    .gov-department-logos{
+      display: none;
+    }
+    .gov-orgs{
+      display: none;
+    }
+    .gov-footer{
+      display: none;
+    }
+  }
 }
