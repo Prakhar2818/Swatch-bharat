@@ -22,7 +22,7 @@ import nic from "/src/assets/nic.png";
 import PledgeTakingForm from "./PledgeTakingForm";
 import CertificateOtp from "./CertificateOtp";
 const LandingPage = () => {
-  const [isFlag, setIsFlag] = useState(false);
+  const [isFlag, setIsFlag] = useState("home");
 
   return (
     <>
@@ -39,10 +39,10 @@ const LandingPage = () => {
           <img className="desktop" src={bannerImg} alt="" />
           <img className="d-none mobile" src={smallBannerImg} alt="" />
         </div>
-        {!isFlag ? (
+        {isFlag === "home" ? (
           <>
             <div className="d-flex justify-content-center">
-              <button className="pledge-btn" onClick={() => setIsFlag(true)}>
+              <button className="pledge-btn" onClick={() => setIsFlag("form")}>
                 शपथ लीजिये <br />
                 Take Pledge
               </button>
@@ -58,8 +58,11 @@ const LandingPage = () => {
                 </span>
               </div>
               <div className="row w-100 justify-content-center certificate-cards mx-0 ">
-                <div className="col-4 d-flex align-items-center justify-content-end mail-card">
-                  <div className="d-flex align-items-center mail">
+                <div
+                  className="col-4 d-flex align-items-center justify-content-end mail-card"
+                  onClick={() => setIsFlag("mail")}
+                >
+                  <div className="d-flex align-items-center mail ">
                     <img className="mx-3" src={mailImg} height={60} alt="" />
                     <div className="w-100">
                       प्रमाणपत्र अपने ई-मेल | मोबाइल पर भेजें <br />
@@ -67,7 +70,10 @@ const LandingPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-4 d-flex align-items-center justify-content-start download-card">
+                <div
+                  className="col-4 d-flex align-items-center justify-content-start download-card "
+                  onClick={() => setIsFlag("mail")}
+                >
                   <img className="mx-3" src={downloadImg} height={60} alt="" />
                   <div>
                     प्रमाणपत्र डाउनलोड <br />
@@ -77,9 +83,16 @@ const LandingPage = () => {
               </div>
             </div>
           </>
+        ) : isFlag === "mail" ? (
+          <CertificateOtp />
         ) : (
-          <PledgeTakingForm></PledgeTakingForm>
+          <div className="row justify-content-center mx-0">
+            <div className="col-12 col-md-10 px-0 ">
+              <PledgeTakingForm />
+            </div>
+          </div>
         )}
+
         <div className="view-analytics">
           <div className="text-white analytics">
             <img src={personImg} height={60} alt="" />

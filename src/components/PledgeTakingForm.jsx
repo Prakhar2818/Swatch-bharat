@@ -1,10 +1,9 @@
 import React from "react";
 import "./PledgeTakingForm.scss";
 
-
 const PledgeTakingForm = () => {
-  return ( 
-    <div className="pledge-form container">
+  return (
+    <div className="pledge-form   ">
       <div className="inner-form w-100">
         <h2 className="text-center text-white fw-bold mb-2">
           स्वच्छ एवं डिजिटल महाकुंभ की प्रतिज्ञा - 2025
@@ -119,10 +118,7 @@ const PledgeTakingForm = () => {
               </label>
             </div>
             <div className="lang-btn">
-              <button
-                type="submit"
-                className=" py-2 rounded-pill"
-              >
+              <button type="submit" className=" py-2 rounded-pill">
                 भाषा के चयन के लिए आगे बढ़ें | Proceed for Language selection
               </button>
             </div>
