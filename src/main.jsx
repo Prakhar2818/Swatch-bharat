@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.css"; // Bootstrap JS for components
 import "./components/LandingPage.scss";
 import "./components/PledgeTakingForm.scss";
-
+import "./components/CertificateOtp.scss";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./PledgeTakingForm.scss";
 
+
 const PledgeTakingForm = () => {
   return ( 
     <div className="pledge-form container">
