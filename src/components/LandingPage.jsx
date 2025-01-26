@@ -19,8 +19,9 @@ import myGov from "/src/assets/my-gov.png";
 import meityLogo from "/src/assets/meity-logo.png";
 import pmIndia from "/src/assets/pm-india.png";
 import nic from "/src/assets/nic.png";
+import PledgeTakingForm from "./PledgeTakingForm";
 const LandingPage = () => {
-  const [isFlag, setIsFlag] = useState("");
+  const [isFlag, setIsFlag] = useState(false);
 
   return (
     <>
@@ -37,40 +38,47 @@ const LandingPage = () => {
           <img className="desktop" src={bannerImg} alt="" />
           <img className="d-none mobile" src={smallBannerImg} alt="" />
         </div>
-        <div className="d-flex justify-content-center">
-          <button className="pledge-btn">
-            शपथ लीजिये <br />
-            Take Pledge
-          </button>
-        </div>
-        <div className="d-flex align-items-center pt-4 certificate flex-column">
-          <div className="title-text mb-4">
-            यदि प्रतिज्ञा पहले ही ले ली है तो वचनबद्धता का प्रमाण-पत्र प्राप्त
-            करें
-            <span className="diff">|</span>
-            <span>
-              If already taken Pledge, Get the Certificate of Commitment
-            </span>
-          </div>
-          <div className="row w-100 justify-content-center certificate-cards mx-0 ">
-            <div className="col-4 d-flex align-items-center justify-content-end mail-card">
-              <div className="d-flex align-items-center mail">
-                <img className="mx-3" src={mailImg} height={60} alt="" />
-                <div className="w-100">
-                  प्रमाणपत्र अपने ई-मेल | मोबाइल पर भेजें <br />
-                  Send certificate to your Email | Mobile
+        {!isFlag ? (
+          <>
+            <div className="d-flex justify-content-center">
+              <button className="pledge-btn" onClick={() => setIsFlag(true)}>
+                शपथ लीजिये <br />
+                Take Pledge
+              </button>
+            </div>
+
+            <div className="d-flex align-items-center pt-4 certificate flex-column">
+              <div className="title-text mb-4">
+                यदि प्रतिज्ञा पहले ही ले ली है तो वचनबद्धता का प्रमाण-पत्र
+                प्राप्त करें
+                <span className="diff">|</span>
+                <span>
+                  If already taken Pledge, Get the Certificate of Commitment
+                </span>
+              </div>
+              <div className="row w-100 justify-content-center certificate-cards mx-0 ">
+                <div className="col-4 d-flex align-items-center justify-content-end mail-card">
+                  <div className="d-flex align-items-center mail">
+                    <img className="mx-3" src={mailImg} height={60} alt="" />
+                    <div className="w-100">
+                      प्रमाणपत्र अपने ई-मेल | मोबाइल पर भेजें <br />
+                      Send certificate to your Email | Mobile
+                    </div>
+                  </div>
+                </div>
+                <div className="col-4 d-flex align-items-center justify-content-start download-card">
+                  <img className="mx-3" src={downloadImg} height={60} alt="" />
+                  <div>
+                    प्रमाणपत्र डाउनलोड <br />
+                    Download Certificate
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-4 d-flex align-items-center justify-content-start download-card">
-              <img className="mx-3" src={downloadImg} height={60} alt="" />
-              <div>
-                प्रमाणपत्र डाउनलोड <br />
-                Download Certificate
-              </div>
-            </div>
-          </div>
-        </div>
+          </>
+        ) : (
+          <PledgeTakingForm></PledgeTakingForm>
+        )}
         <div className="view-analytics">
           <div className="text-white analytics">
             <img src={personImg} height={60} alt="" />
@@ -79,6 +87,7 @@ const LandingPage = () => {
             <button className="view-analytics-btn">View Analytics</button>
           </div>
         </div>
+
         <div className="row mx-0 gov-department-logos ">
           <div className="col-12 text-center">
             <img src={transformIndia} height={25} alt="" />

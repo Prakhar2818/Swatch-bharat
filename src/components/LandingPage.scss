@@ -16,7 +16,13 @@
     color: white;
     border-radius: 45px;
     padding: 5px 20px;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+    &:hover{
+      background-color: #770249;
+    }
   }
+
   .certificate {
     margin-bottom: 30px;
     .title-text {
@@ -69,6 +75,10 @@
         padding: 5px 15px;
         border: none;
         cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        &:hover{
+          background-color: #e6dac3;
+        }
       }
     }
   }
@@ -82,7 +92,7 @@
     }
   }
 
-  .gov-orgs{
+  .gov-orgs {
     background-color: #000;
     padding: 15px 0px;
     .diff-logo {
@@ -92,16 +102,16 @@
     }
   }
 
-  .gov-footer{
+  .gov-footer {
     background-color: #eeeae1;
-    padding: 20px 0px;
+    padding: 10px 0px;
     color: #7f8080;
     font-size: 13px;
-    .inner-foot{
-      img{
+    .inner-foot {
+      img {
         margin: 10px 30px 0 0;
       }
-      .foot{
+      .foot {
         width: 40%;
       }
     }
@@ -214,13 +224,13 @@
         }
       }
     }
-    .gov-department-logos{
+    .gov-department-logos {
       display: none;
     }
-    .gov-orgs{
+    .gov-orgs {
       display: none;
     }
-    .gov-footer{
+    .gov-footer {
       display: none;
     }
   }

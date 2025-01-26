@@ -1,0 +1,47 @@
+.pledge-form {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 11px !important;
+
+  .inner-form {
+    background-color: #115584;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    margin-top: -8px;
+
+    .card {
+      background-color: #115584;
+      color: white;
+      border: none !important;
+      padding: 0px 100px;
+
+      label {
+        font-weight: bold;
+      }
+
+      .lang-btn {
+        display: flex;
+        justify-content: center;
+
+        button {
+          padding: 5px 15px;
+          border: none;
+          background-color: #eee9e0;
+          font-weight: 500;
+
+          &:hover {
+            background-color: #e6dac3;
+          }
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .card {
+        padding: 0px 20px;
+      }
+    }
+  }
+}
