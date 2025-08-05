@@ -21,9 +21,10 @@ import pmIndia from "/src/assets/pm-india.png";
 import nic from "/src/assets/nic.png";
 import PledgeTakingForm from "./PledgeTakingForm";
 import CertificateOtp from "./CertificateOtp";
-const LandingPage = () => {
+const LandingPage = ({ apiConfig }) => {
   const [isFlag, setIsFlag] = useState("home");
 
+  console.log(apiConfig);
   return (
     <>
       <div className="landing-page  d-flex justify-content-center flex-column">

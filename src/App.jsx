@@ -1,5 +1,7 @@
+// src/App.jsx
 import { useState } from 'react'
 import './App.css'
+import config from './config' // Import the config
 import LandingPage from './components/LandingPage'
 
 function App() {
@@ -7,7 +9,7 @@ function App() {
 
   return (
     <>
-      <LandingPage></LandingPage>
+      <LandingPage apiConfig={config} />
     </>
   )
 }
